@@ -1,0 +1,198 @@
+/* Advanced BookForm Styles */
+
+/* Block for the BookForm Component */
+.book-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  /* Heading for the BookForm */
+  .book-form__title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Form Input Styles */
+  .book-form__input {
+    padding: 10px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--input-bg-color);
+    outline: none;
+    transition: border-color var(--transition-time), box-shadow var(--transition-time);
+  }
+  
+  /* Focus State for Inputs */
+  .book-form__input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(98, 0, 234, 0.5);
+  }
+  
+  /* Button Styles */
+  .book-form__button {
+    padding: 8px 14px; /* Reduced padding for smaller button size */
+    margin: 8px 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color var(--transition-time), transform var(--transition-time);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+  }
+  
+  /* Button Hover Effects */
+  .book-form__button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+  }
+  
+  .book-form__button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* Edit and Delete Button Styling */
+  .book-form__edit-button {
+    background-color: #4caf50; /* Soft Green for Edit */
+    margin-right: 12px; /* Add more gap between buttons */
+  }
+  
+  .book-form__edit-button:hover {
+    background-color: #388e3c;
+  }
+  
+  .book-form__delete-button {
+    background-color: #f44336; /* Soft Red for Delete */
+  }
+  
+  .book-form__delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* List of Books */
+  .book-form__list {
+    margin-top: 2rem;
+  }
+  
+  .book-form__list h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  /* Book List Items */
+  .book-form__list-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .book-form__list-item strong {
+    font-weight: bold;
+  }
+  
+  .book-form__list-item button {
+    margin-left: 8px;
+    padding: 6px 12px; /* Smaller buttons for edit/delete */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-time);
+  }
+  
+  .book-form__list-item .book-form__edit-button {
+    background-color: #4caf50; /* Edit button color */
+  }
+  
+  .book-form__list-item .book-form__edit-button:hover {
+    background-color: #388e3c;
+  }
+  
+  .book-form__list-item .book-form__delete-button {
+    background-color: #f44336; /* Delete button color */
+  }
+  
+  .book-form__list-item .book-form__delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Logout Button Styles */
+  .book-form__logout-button {
+    padding: 10px 20px; /* Slightly larger padding for logout */
+    background-color: #ff9800; /* Warm Orange for Logout */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-time), transform var(--transition-time);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    margin-top: 20px;
+  }
+  
+  /* Hover effect for Logout */
+  .book-form__logout-button:hover {
+    background-color: #fb8c00;
+  }
+  
+  /* Error Message */
+  .book-form__error {
+    color: var(--error-color);
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .book-form {
+      padding: 1.5rem;
+    }
+  
+    .book-form__title {
+      font-size: 1.6rem;
+    }
+  
+    .book-form__input,
+    .book-form__button {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .book-form__list-item {
+      font-size: 0.9rem;
+    }
+  
+    .book-form__list-item button {
+      padding: 5px 10px;
+    }
+  }
+  
