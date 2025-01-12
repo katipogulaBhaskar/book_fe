@@ -21,13 +21,13 @@ const BookForm = () => {
     try {
       if (editBook) {
         const response = await axios.put(
-          `http://localhost:5000/api/books/${editBook._id}`,
+          `https://book-be-y1yq.onrender.com/api/books/${editBook._id}`,
           book
         );
         alert(response.data.message || "Book updated successfully!");
         setEditBook(null);
       } else {
-        const response = await axios.post("http://localhost:5000/api/books", book);
+        const response = await axios.post("https://book-be-y1yq.onrender.com/api/books", book);
         alert(response.data.message || "Book added successfully!");
       }
 
@@ -44,7 +44,7 @@ const BookForm = () => {
   const fetchAllBooks = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/api/get_books");
+      const response = await axios.get("https://book-be-y1yq.onrender.com/api/get_books");
       setBooks(response.data);
       setShowBooks(true);
     } catch (err) {
@@ -64,7 +64,7 @@ const BookForm = () => {
     if (window.confirm("Are you sure you want to delete this book?")) {
       setLoading(true);
       try {
-        const response = await axios.delete(`http://localhost:5000/api/books/${bookId}`);
+        const response = await axios.delete(`https://book-be-y1yq.onrender.com/api/books/${bookId}`);
         alert(response.data.message || "Book deleted successfully!");
         fetchAllBooks();
       } catch (err) {
